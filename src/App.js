@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Coin from "./Coin";
+import Header from './Header'
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -37,9 +38,11 @@ function App() {
           />
         </form>
       </div>
+      <Header />
       {filteredCoins.map((coin) => {
         console.log(coin.name);
         return (
+        
           <Coin
             key={coin.id}
             name={coin.name}
